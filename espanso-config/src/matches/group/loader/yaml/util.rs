@@ -70,6 +70,7 @@ fn convert_value(value: serde_yaml::Value) -> Result<Value> {
         .collect::<Result<Vec<Value>>>()?,
     ),
     serde_yaml::Value::Mapping(m) => Value::Object(convert_params(m)?),
+    serde_yaml::Value::Tagged(_t) => todo!()
   })
 }
 
