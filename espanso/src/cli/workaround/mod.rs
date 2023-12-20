@@ -52,3 +52,13 @@ fn workaround_main(args: CliModuleArgs) -> i32 {
 
   WORKAROUND_SUCCESS
 }
+
+#[cfg(test)]
+mod tests {
+  use super::*;
+  #[test]
+  fn test_cli_module() {
+    let cli_module = CliModule{subcommand: "workaround".to_string(), ..Default::default()};
+    assert_eq!(cli_module.subcommand, "workaround".to_string());
+  }
+}

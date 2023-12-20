@@ -319,3 +319,17 @@ fn is_legacy_runtime_dir(path: &Path) -> bool {
 
   false
 }
+
+#[cfg(test)]
+mod tests {
+    use std::path::Path;
+    use crate::is_legacy_runtime_dir;
+
+  #[test]
+  fn test_is_legacy_runtime_dir() {
+    let path: &Path = Path::new("");
+    assert!(!is_legacy_runtime_dir(path));
+    let path = Path::new("$HOME/.espanso");
+    assert!(!is_legacy_runtime_dir(path));
+  }
+}

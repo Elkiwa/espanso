@@ -638,7 +638,7 @@ dependencies = [
  "thiserror",
  "widestring",
  "winapi 0.3.9",
- "winreg 0.9.0",
+ "winreg",
 ]
 
 [[package]]
@@ -2339,7 +2339,7 @@ dependencies = [
  "wasm-bindgen-futures",
  "web-sys",
  "webpki-roots",
- "winreg 0.10.1",
+ "winreg",
 ]
 
 [[package]]
@@ -3417,15 +3417,6 @@ name = "windows_x86_64_msvc"
 version = "0.42.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9aec5da331524158c6d1a4ac0ab1541149c0b9505fde06423b02f5ef0106b9f0"
-
-[[package]]
-name = "winreg"
-version = "0.9.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "16cdb3898397cf7f624c294948669beafaeebc5577d5ec53d0afb76633593597"
-dependencies = [
- "winapi 0.3.9",
-]
 
 [[package]]
 name = "winreg"
